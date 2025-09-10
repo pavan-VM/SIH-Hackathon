@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickComp - Environmental Education Platform</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Removed header and nav for login page -->
+    <!-- <header>
+        <h1>QuickComp</h1>
+        <nav>
+            <a href="#problem">The Problem</a>
+            <a href="#why">Why It Matters</a>
+            <a href="#idea">The Idea</a>
+            <a href="#quiz">Quiz</a>
+            <a href="#tasks">Tasks</a>
+            <a href="#rewards">Rewards</a>
+            <a href="#register">Register</a>
+        </nav>
+    </header> -->
+
+    <section id="login-section">
+        <div class="left-panel">
+            <h2>Welcome Back to EcoSphere</h2>
+            <p>To stay connected with us please login with your personal info.</p>
+        </div>
+        <div class="right-panel">
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="text" id="login-name" placeholder="Name" required />
+                <input type="password" id="login-password" placeholder="Password" required />
+                <button type="submit">Login</button>
+            </form>
+            <div class="login-options">
+                <a href="#" id="forgot-password">Forgot password?</a>
+                <span> | </span>
+                <a href="#" id="sign-up">Sign up</a>
+            </div>
+            <div id="login-message"></div>
+        </div>
+    </section>
+
+    <section id="signup-section" style="display:none;">
+        <div class="left-panel">
+            <h2>Join EcoSphere Today</h2>
+            <p>Create your account to start your environmental journey with us.</p>
+        </div>
+        <div class="right-panel">
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <input type="text" id="signup-name" placeholder="Name" required />
+                <input type="email" id="signup-email" placeholder="Email" required />
+                <input type="password" id="signup-password" placeholder="Password" required />
+                <input type="password" id="signup-confirm-password" placeholder="Confirm Password" required />
+                <button type="submit">Sign Up</button>
+            </form>
+            <div class="signup-options">
+                <a href="#" id="back-to-login">Back to Login</a>
+            </div>
+            <div id="signup-message"></div>
+        </div>
+    </section>
+
+    <section id="forgot-password-section" style="display:none;">
+        <div class="left-panel">
+            <h2>Forgot Your Password?</h2>
+            <p>Enter your email address to reset your password.</p>
+        </div>
+        <div class="right-panel">
+            <h2>Reset Password</h2>
+            <form id="forgot-password-form">
+                <input type="email" id="forgot-password-email" placeholder="Email" required />
+                <button type="submit">Send Reset Link</button>
+            </form>
+            <div class="forgot-password-options">
+                <a href="#" id="back-to-login-from-forgot">Back to Login</a>
+            </div>
+            <div id="forgot-password-message"></div>
+        </div>
+    </section>
+
+    <main style="display: none;">
+        <!-- Removed problem, why it matters, and idea sections as requested -->
+
+        <nav id="main-nav" style="display:none;">
+            <a href="#quiz">Quizzes</a>
+            <a href="#tasks">Challenges</a>
+            <a href="#games">Games</a>
+        </nav>
+
+        <section id="quiz">
+            <h2>Interactive Quiz</h2>
+            <div id="quiz-container">
+                <div id="question"></div>
+                <div id="options"></div>
+                <button id="next-btn">Next</button>
+                <div id="result"></div>
+            </div>
+        </section>
+
+        <section id="tasks">
+            <h2>Real-life Tasks</h2>
+            <div id="tasks-container">
+                <div class="task" data-task="plant-tree">
+                    <p>Plant a tree in your community</p>
+                    <button class="complete-btn">Mark as Done</button>
+                </div>
+                <div class="task" data-task="save-water">
+                    <p>Save water by taking shorter showers</p>
+                    <button class="complete-btn">Mark as Done</button>
+                </div>
+                <div class="task" data-task="recycle">
+                    <p>Properly segregate and recycle waste</p>
+                    <button class="complete-btn">Mark as Done</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="rewards">
+            <h2>QuickComp-points and Rewards</h2>
+            <div id="points-display">Total QuickComp-points: <span id="total-points">0</span></div>
+            <div id="badges">
+                <h3>Badges Earned:</h3>
+                <ul id="badges-list"></ul>
+            </div>
+        </section>
+
+        <section id="register">
+            <h2>School Registration</h2>
+            <form id="registration-form">
+                <input type="text" id="school-name" placeholder="School Name" required />
+                <input type="email" id="school-email" placeholder="Email" required />
+                <input type="text" id="contact-person" placeholder="Contact Person" required />
+                <button type="submit">Register</button>
+            </form>
+            <div id="registration-message"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
